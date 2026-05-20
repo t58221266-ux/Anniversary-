@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Anniversary</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ff758c,#ff7eb3,#ffd3a5);
+    overflow-x:hidden;
+}
+
+/* PASSWORD PAGE */
+
+#passwordPage{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    background:white;
+    width:90%;
+    max-width:400px;
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.login-box h1{
+    color:#ff4f81;
+    margin-bottom:15px;
+    font-size:35px;
+}
+
+.login-box p{
+    margin-bottom:20px;
+    color:#555;
+    font-size:18px;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#f1f1f1;
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#ff4f81;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff2e68;
+    transform:scale(1.03);
+}
+
+/* MAIN WEBSITE */
+
+#mainWebsite{
+    display:none;
+    padding:20px;
+}
+
+.card{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    border-radius:30px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 35px rgba(0,0,0,0.2);
+    animation: fade 1.5s ease;
+}
+
+.main-title{
+    font-size:55px;
+    color:#ff4f81;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    font-size:28px;
+    color:#ff7a9c;
+    margin-bottom:25px;
+}
+
+.message{
+    font-size:20px;
+    color:#444;
+    line-height:1.9;
+}
+
+.special{
+    margin-top:30px;
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+    padding:25px;
+    border-radius:20px;
+    font-size:22px;
+    font-weight:bold;
+    color:#222;
+    line-height:1.8;
+}
+
+/* SONG */
+
+.song-box{
+    margin-top:40px;
+}
+
+.song-box h2{
+    color:#ff4f81;
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+/* PHOTOS */
+
+.photos{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.photos img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+.photos img:hover{
+    transform:scale(1.05);
+}
+
+/* LAST PAGE */
+
+.last-page{
+    margin-top:50px;
+    padding:40px;
+    border-radius:25px;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+}
+
+.last-page h1{
+    font-size:55px;
+    color:white;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.last-page p{
+    font-size:30px;
+    color:white;
+    line-height:1.5;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:35px;
+    color:#666;
+    font-size:18px;
+}
+
+/* HEARTS */
+
+.hearts span{
+    position:fixed;
+    bottom:-50px;
+    color:white;
+    font-size:25px;
+    animation: float 10s linear infinite;
+}
+
+.hearts span:nth-child(1){left:10%;animation-duration:8s;}
+.hearts span:nth-child(2){left:30%;animation-duration:10s;}
+.hearts span:nth-child(3){left:50%;animation-duration:7s;}
+.hearts span:nth-child(4){left:70%;animation-duration:12s;}
+.hearts span:nth-child(5){left:90%;animation-duration:9s;}
+
+@keyframes float{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-1200px) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>💞</span>
+    <span>❤️</span>
+</div>
+
+<!-- PASSWORD PAGE -->
+
+<div id="passwordPage">
+
+    <div class="login-box">
+
+        <h1>🔒 Anniversary Surprise</h1>
+
+        <p>Password Enter Karo ❤️</p>
+
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button onclick="checkPassword()">
+            Open Surprise 🎁
+        </button>
+
+    </div>
+
+</div>
+
+<!-- MAIN WEBSITE -->
+
+<div id="mainWebsite">
+
+    <div class="card">
+
+        <h1 class="main-title">
+            Happy Anniversary ❤️
+        </h1>
+
+        <h2 class="subtitle">
+            Dear Aunty Ji & Uncle Ji ✨
+        </h2>
+
+        <p class="message">
+
+            Aap dono ki jodi hamesha isi tarah pyari aur khush rahe ❤️<br><br>
+
+            Bhagwan aap dono ko hamesha healthy aur happy rakhe 💖<br><br>
+
+            Aap dono ek perfect couple ho jo sabko inspire karta hai 😊✨
+
+        </p>
+
+        <div class="special">
+
+            Or ye sab Khushi ji ki vajah se ho paa raha hai 😊❤️<br><br>
+
+            Agar vo dost nahi banti toh mein aapko wish bhi nahi kar pata 💖<br><br>
+
+            Isliye Khushi ko dil se Thank You 😊👍
+
+        </div>
+
+        <!-- SONG -->
+
+        <div class="song-box">
+
+            <h2>
+                🎵 Special Song 🎵
+            </h2>
+
+            <audio controls autoplay loop style="width:100%;">
+
+                <source src="song.mp3" type="audio/mpeg">
+
+            </audio>
+
+        </div>
+
+        <!-- PHOTOS -->
+
+        <div class="photos">
+
+            <img src="photo1.jpg">
+
+            <img src="photo2.jpg">
+
+            <img src="photo3.jpg">
+
+        </div>
+
+        <!-- LAST PAGE -->
+
+        <div class="last-page">
+
+            <h1>
+                ❤️ Happy Anniversary ❤️
+            </h1>
+
+            <p>
+                Dear Aunty Ji & Uncle Ji ✨
+            </p>
+
+        </div>
+
+        <div class="footer">
+            Made With ❤️
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function checkPassword(){
+
+    let pass = document.getElementById("password").value;
+
+    if(pass === "khushi123"){
+
+        document.getElementById("passwordPage").style.display = "none";
+        document.getElementById("mainWebsite").style.display = "block";
+
+    }
+
+    else{
+
+        alert("Wrong Password ❌");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
